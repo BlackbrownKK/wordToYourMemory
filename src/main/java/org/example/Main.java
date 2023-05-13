@@ -10,13 +10,11 @@ public class Main {
 
 
         while (true){
-            baseWords.toQuestion(); // даст любую пару рус / анг
-            String wordRus = baseWords.toQuestion()[0]; //  даст рус
-            String wordEng = baseWords.toQuestion()[1]; //  даст анг
-            System.out.println(wordRus);
-            System.out.println(wordEng);
+            String[] str = baseWords.toQuestion(); // даст любую пару рус / анг
+            String wordRus = str[0]; //  даст рус
+            String wordEng = str[1]; //  даст анг
             System.out.println("переведи это: " + wordRus);
-            System.out.println(wordsService.makeWordDividedBySyllable(wordEng).get(0));
+//            System.out.println(wordsService.makeWordDividedBySyllable(wordEng).get(0));
             Scanner sc = new Scanner(System.in);
             String answer = sc.nextLine();
             if (answer.equals(wordEng)){
